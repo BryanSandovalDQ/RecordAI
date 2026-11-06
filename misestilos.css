@@ -1,0 +1,356 @@
+:root {
+  --color-fondo: #f2f5f7;
+  --color-superficie: #ffffff;
+  --color-principal: #123b67;
+  --color-principal-oscuro: #0a2949;
+  --color-texto: #17212b;
+  --color-texto-suave: #4b5967;
+  --color-borde: #b8c4ce;
+  --color-verde: #176b3a;
+  --color-verde-fondo: #e7f4ec;
+  --color-foco: #f0b429;
+  --radio: 14px;
+  --sombra: 0 4px 16px rgba(18, 59, 103, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: Arial, Verdana, Tahoma, sans-serif;
+  line-height: 1.5;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+.aplicacion {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+  background: var(--color-superficie);
+}
+
+.encabezado {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #dbe2e8;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.marca__icono {
+  display: inline-flex;
+  flex: 0 0 46px;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--color-principal);
+  color: #ffffff;
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.marca__nombre,
+.marca__lema,
+.saludo p,
+.recordatorio p,
+footer p {
+  margin: 0;
+}
+
+.marca__nombre {
+  color: var(--color-principal-oscuro);
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.marca__lema {
+  margin-top: 3px;
+  color: var(--color-texto-suave);
+  font-size: 1rem;
+}
+
+main {
+  padding-top: 28px;
+}
+
+.saludo {
+  margin-bottom: 24px;
+}
+
+.saludo p {
+  color: var(--color-principal);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  color: var(--color-texto);
+  line-height: 1.22;
+}
+
+h1 {
+  margin: 5px 0 0;
+  font-size: clamp(1.75rem, 8vw, 2.1rem);
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 1.45rem;
+}
+
+.tarjeta {
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+  box-shadow: var(--sombra);
+}
+
+.tarjeta--principal {
+  padding: 20px;
+  border-color: #91a9bf;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+textarea {
+  width: 100%;
+  min-height: 128px;
+  padding: 16px;
+  resize: vertical;
+  border: 2px solid #788b9d;
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--color-texto);
+  font-size: 1.12rem;
+  line-height: 1.45;
+}
+
+textarea::placeholder {
+  color: #52606d;
+  opacity: 1;
+}
+
+.boton {
+  width: 100%;
+  min-height: 58px;
+  padding: 14px 18px;
+  border: 3px solid transparent;
+  border-radius: 11px;
+  cursor: pointer;
+  font-size: 1.18rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.boton--principal {
+  margin-top: 16px;
+  background: var(--color-principal);
+  color: #ffffff;
+}
+
+.boton--secundario {
+  margin-top: 28px;
+  border-color: var(--color-principal);
+  background: #ffffff;
+  color: var(--color-principal-oscuro);
+}
+
+.boton:hover {
+  background: var(--color-principal-oscuro);
+  color: #ffffff;
+}
+
+.boton:focus-visible,
+textarea:focus-visible {
+  outline: 4px solid var(--color-foco);
+  outline-offset: 3px;
+}
+
+.texto-ayuda {
+  margin: 12px 0 0;
+  color: var(--color-texto-suave);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.seccion {
+  margin-top: 32px;
+}
+
+.interpretacion {
+  padding: 20px;
+}
+
+.datos-recordatorio {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 0;
+}
+
+.datos-recordatorio div {
+  padding-bottom: 13px;
+  border-bottom: 2px solid #e1e6eb;
+}
+
+.datos-recordatorio dt {
+  color: var(--color-texto-suave);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.datos-recordatorio dd {
+  margin: 3px 0 0;
+  color: var(--color-texto);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.estado {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 18px 0 0;
+  padding: 11px 13px;
+  border: 2px solid #6ea583;
+  border-radius: 9px;
+  background: var(--color-verde-fondo);
+  color: #0d552c;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.estado span {
+  font-size: 1.25rem;
+}
+
+.lista-recordatorios {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.recordatorio {
+  display: grid;
+  grid-template-columns: 38px 68px 1fr;
+  align-items: center;
+  gap: 12px;
+  min-height: 78px;
+  padding: 14px 15px;
+  border: 2px solid var(--color-borde);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.recordatorio__indicador {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #6ea583;
+  border-radius: 50%;
+  background: var(--color-verde-fondo);
+  color: var(--color-verde);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.recordatorio time {
+  color: var(--color-principal-oscuro);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.recordatorio p {
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+footer {
+  margin-top: 34px;
+  padding-top: 22px;
+  border-top: 2px solid #dbe2e8;
+  color: var(--color-texto-suave);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.solo-lectura {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 540px) {
+  body {
+    padding: 28px 0;
+  }
+
+  .aplicacion {
+    max-width: 520px;
+    min-height: calc(100vh - 56px);
+    padding: 28px 28px 38px;
+    border: 2px solid #d4dde5;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(18, 59, 103, 0.12);
+  }
+
+  .datos-recordatorio {
+    grid-template-columns: 1.5fr 1fr 0.8fr;
+    gap: 12px;
+  }
+
+  .datos-recordatorio div {
+    padding: 0 12px 0 0;
+    border-right: 2px solid #e1e6eb;
+    border-bottom: 0;
+  }
+
+  .datos-recordatorio div:last-child {
+    padding-right: 0;
+    border-right: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}

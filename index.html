@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Prototipo visual de RecordIA, un asistente sencillo para recordar actividades importantes.">
+  <title>RecordIA | Tus recordatorios</title>
+  <link rel="stylesheet" href="misestilos.css">
+</head>
+
+<body>
+  <div class="aplicacion">
+    <header class="encabezado">
+      <div class="marca">
+        <span class="marca__icono" aria-hidden="true">✓</span>
+        <div>
+          <p class="marca__nombre">RecordIA</p>
+          <p class="marca__lema">Tu asistente para recordar lo importante</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="saludo" aria-labelledby="titulo-principal">
+        <p>Buenos días</p>
+        <h1 id="titulo-principal">¿Qué necesitas recordar?</h1>
+      </section>
+
+      <section class="tarjeta tarjeta--principal" aria-labelledby="titulo-crear">
+        <h2 id="titulo-crear" class="solo-lectura">Crear un recordatorio</h2>
+        <form id="formulario-recordatorio">
+          <label for="recordatorio">Escribe lo que necesitas recordar</label>
+          <textarea id="recordatorio" name="recordatorio" rows="4"
+            placeholder="Ej: Mañana a las 10 tengo cita médica, o tomar pastilla a las 8 y a las 20 durante 3 días"></textarea>
+          <button id="btn-crear" class="boton boton--principal" type="button">Crear recordatorio</button>
+          <p class="texto-ayuda">Puedes escribirlo como lo dirías normalmente.</p>
+        </form>
+      </section>
+
+      <!-- Contenedor dinámico para mostrar cómo lo entendió la IA -->
+      <section class="seccion" aria-labelledby="titulo-interpretacion" id="seccion-interpretacion"
+        style="display: none;">
+        <h2 id="titulo-interpretacion">Así lo entendió RecordIA</h2>
+        <div id="contenedor-interpretaciones"></div>
+      </section>
+
+      <!-- Lista general de recordatorios -->
+      <section class="seccion" aria-labelledby="titulo-hoy">
+        <h2 id="titulo-hoy">Mis recordatorios</h2>
+        <div class="lista-recordatorios" id="lista-recordatorios">
+          <!-- Los recordatorios se insertarán aquí dinámicamente -->
+        </div>
+      </section>
+
+      <button id="btn-limpiar" class="boton boton--secundario" type="button">+ Limpiar y redactar otro</button>
+    </main>
+
+    <footer>
+      <p>RecordIA cuida lo importante contigo.</p>
+    </footer>
+  </div>
+
+  <!-- Vinculación del script -->
+  <script src="misscripts.js"></script>
+</body>
+
+</html>
